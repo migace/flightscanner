@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { KiwiapiService } from './kiwiapi.service';
+import { KiwiapiService } from './kiwiAPI.service';
 
 describe('KiwiapiService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
