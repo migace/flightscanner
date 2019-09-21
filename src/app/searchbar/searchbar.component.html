@@ -1,19 +1,19 @@
-<div class="searchbar">
+<form class="searchbar" [formGroup]="searchForm" (ngSubmit)="handleOnSubmit()">
   <mat-form-field class="input">
-    <input matInput placeholder="From">
+    <input matInput placeholder="From" formControlName="from">
   </mat-form-field>
       
   <mat-form-field class="input">
-    <input matInput placeholder="To">
+    <input matInput placeholder="To" formControlName="to">
   </mat-form-field>
       
   <mat-form-field class="input">
-    <input type="date" matInput placeholder="Departure">
+    <input type="date" matInput placeholder="Departure" formControlName="departure">
   </mat-form-field>
       
   <mat-form-field class="input">
-    <input type="date" matInput placeholder="Return">
+    <input type="date" matInput placeholder="Return" formControlName="return">
   </mat-form-field>
       
   <button mat-raised-button color="primary">Explore</button> 
-</div>
+</form>
