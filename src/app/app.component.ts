@@ -9,7 +9,7 @@ import { KiwiAPIService } from '../services/kiwiAPI.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'skyscanner';
+  title = 'SkyScanner';
 
   constructor(
     private kiwiAPIService: KiwiAPIService,
