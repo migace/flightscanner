@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 import * as moment from 'moment';
@@ -9,6 +9,7 @@ import * as moment from 'moment';
   styleUrls: ['./searchbar.component.scss']
 })
 export class SearchbarComponent implements OnInit {
+  @Output() handleForm = new EventEmitter<any>();
   searchForm = new FormGroup({
     from: new FormControl('PRG'),
     to: new FormControl('LGW'),
@@ -22,6 +23,6 @@ export class SearchbarComponent implements OnInit {
   }
 
   handleOnSubmit() {
-    console.warn(this.searchForm.value);
+    this.handleForm.emit(this.searchForm.value);
   }
 }

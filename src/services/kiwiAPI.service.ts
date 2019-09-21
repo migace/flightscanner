@@ -14,11 +14,9 @@ export class KiwiAPIService {
   ) { }
 
   getFlights(data: IFlightQuery) {
-    const response = this.http.get(
+    return this.http.get(
       `${this.API_URL}/flights?${this.prepareParams(data)}`
     );
-
-    response.subscribe(data => console.log('data', data));
   }
 
   private prepareParams(params: IFlightQuery): string {
